@@ -1,4 +1,5 @@
-﻿using Sitecore.Mvc.Controllers;
+﻿using Newtonsoft.Json;
+using Sitecore.Mvc.Controllers;
 using SitecoreCSPad.Models;
 using SitecoreCSPad.Scripting;
 using System.Web;
@@ -32,8 +33,16 @@ namespace SitecoreCSPad.Controllers
                 ErrorMessage = script?.ErrorMessage,
                 GeneratedClassCodeWithLineNumbers = script?.GeneratedClassCodeWithLineNumbers
             };
-            
-            return Json(executeResult, JsonRequestBehavior.AllowGet);
+
+            var list = JsonConvert.SerializeObject(executeResult,
+                        Formatting.None,
+                        new JsonSerializerSettings()
+                        {
+                            ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+                        });
+
+
+            return Json(list, JsonRequestBehavior.AllowGet);
         }
 
         // Decode a Base64 string to a string
