@@ -1,18 +1,23 @@
-﻿using SitecoreCSPad.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Sitecore.Mvc.Controllers;
+using SitecoreCSPad.Models;
+using SitecoreCSPad.Scripting;
 using System.Web;
 using System.Web.Mvc;
-using Westwind.Scripting;
+
 
 namespace SitecoreCSPad.Controllers
 {
-    public class SitecoreCSPadController : Controller
+    public class SitecoreCSPadController : SitecoreController
     {
-        // GET: SitecoreCSPad
-        public ActionResult Execute(string csCode)
+        public ActionResult GetSCCSPad()
         {
+            return View("/Sitecore/Admin/SitecoreCSPad/Views/SitecoreCSPadEditor.cshtml");
+        }
+
+        // GET: SitecoreCSPad
+        public JsonResult Execute(string csCode)
+        {
+           
             ExecuteResult executeResult = new ExecuteResult();
 
             var script = new CSharpScriptExecution() { SaveGeneratedCode = true };
@@ -22,7 +27,11 @@ namespace SitecoreCSPad.Controllers
             var code = DecodeBase64(@csCode);
            
             executeResult.Result = script.ExecuteCode<dynamic>(code);
-            executeResult.Script = script;
+            executeResult.Script = new Script()
+            {
+                ErrorMessage = script?.ErrorMessage,
+                GeneratedClassCodeWithLineNumbers = script?.GeneratedClassCodeWithLineNumbers
+            };
             
             return Json(executeResult, JsonRequestBehavior.AllowGet);
         }
