@@ -11,7 +11,7 @@ namespace SitecoreCSPad.Sitecore.Admin.SitecoreCSPad
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            var r = HttpContext.Current;
         }
     }
 }

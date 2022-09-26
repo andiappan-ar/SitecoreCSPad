@@ -12,6 +12,7 @@ namespace SitecoreCSPad.Models
 
     public class Script
     {
+        public bool Error { get; set; }
         public string GeneratedClassCodeWithLineNumbers { get; set; }
         public string ErrorMessage { get; set; }
     }
