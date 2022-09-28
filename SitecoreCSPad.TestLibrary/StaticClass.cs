@@ -1,13 +1,18 @@
 ﻿using Sitecore.Collections;
+using Sitecore.ContentSearch.Linq;
+using Sitecore.ContentSearch.SearchTypes;
 using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.Data.Managers;
 using Sitecore.Data.Masters;
+using Sitecore.Mvc.Extensions;
+using Sitecore.Web.UI.HtmlControls;
 using SitecoreCSPad.TestLibrary.Model;
 using SitecoreCSPad.TestNonReferredLibrary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace SitecoreCSPad.TestLibrary
 {
@@ -93,7 +98,14 @@ namespace SitecoreCSPad.TestLibrary
             return resultRoot;
 
 
-        }
+            using (var ctx = Sitecore.ContentSearch.ContentSearchManager.GetIndex("ar_master_index").CreateSearchContext())
+            {
+                IQueryable<SearchResultItem> searchQuery = ctx.GetQueryable<SearchResultItem>();
+                var results = searchQuery.ToList().Where(x => x.Content.Contains("Branch")).FirstOrDefault();
+            }
+
+
+            }
 
 
     }
