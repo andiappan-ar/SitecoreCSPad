@@ -9,3 +9,6 @@
     background-color: rgba(255, 255, 255, 0.8);
     z-index: 2;
 }
+#json-data .json-string, #textarea-console {
+    white-space: pre-line;
+}
