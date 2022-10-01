@@ -1,4 +1,5 @@
 ﻿using Sitecore.Collections;
+using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.Linq;
 using Sitecore.ContentSearch.SearchTypes;
 using Sitecore.Data;
@@ -42,7 +43,21 @@ namespace SitecoreCSPad.TestLibrary
 
             try
             {
-                string rootItemPath = @"/sitecore/content/SitecoreBulkItem/RootNestedItem";
+                string searchTerm = "key_t_en:\"Key Four\"";
+                var index = ContentSearchManager.GetIndex("my_new_cutom_core_webdb");
+                using (var ctx = index.CreateSearchContext())
+                {
+                    var query = ctx.GetQueryable<SearchResultItem>().Where(x => x.Content.Equals(searchTerm));
+                    var results = query.GetResults();
+                    if (results.Hits.Any())
+                    {
+                        return results;
+                    }
+
+                    return null;
+                }
+
+                    string rootItemPath = @"/sitecore/content/SitecoreBulkItem/RootNestedItem";
                 string templateID = "{C4A7A3C9-879F-49E0-BDBF-0789C027AC2D}";
 
                 Database masterDB = Sitecore.Configuration.Factory.GetDatabase("master");

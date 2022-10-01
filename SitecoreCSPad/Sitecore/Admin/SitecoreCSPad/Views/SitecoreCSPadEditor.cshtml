@@ -20,18 +20,24 @@
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
-                <li class="nav-item">
+                <li class="nav-item p-1">
                     <button id="sccs-run" class="btn btn-success" href="#"><strong>></strong></button>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Samples</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item sample-snippets" id="sample-readitem" href="#">Read items recursively</a></li>
-                        <li><a class="dropdown-item sample-snippets" id="sample-updateitem" href="#">Update sitecore item</a></li>
-                        <li><a class="dropdown-item sample-snippets" id="sample-readsolr" href="#">Get list from solr index</a></li>
-                    </ul>
+                <li class="nav-item p-1 dropdown">
+                    <select class="form-select sample-snippets" id="sample-snippets" name="sample-snippets">
+                        <option id="sample-readitem" value="sample-readitem">Read items recursively</option>
+                        <option id="sample-updateitem" value="sample-updateitem">Update sitecore item</option>
+                        <option id="sample-readsolr" value="sample-readsolr">Get list from solr index</option>
+                    </select>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item p-1 dropdown">
+                    <select class="form-select monaco-theme" id="monaco-theme" name="monaco-theme">
+                        <option id="vs-dark" value="vs-dark">Visual Studio Dark</option>
+                        <option id="vs" value="vs">Visual Studio</option>
+                        <option id="hc-black" value="hc-black">High Contrast Dark</option>
+                    </select>
+                </li>
+                <li class="nav-item p-1">
                     <a class="nav-link" href="#">Documents</a>
                 </li>
             </ul>
