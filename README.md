@@ -27,8 +27,8 @@ Listed below some example use cases,
 ## Setup
 Setting up this in your Sitecore XP/XM.
 
-1. Go to release folder, get release artifacts and paste this in your website root.
-2. Go to your web config and add custom assembly bindings from this file. (Please dont copy paste this config, Just do the manual change.)
+1. Go to [release folder](URL 'https://github.com/andiappan-ar/SitecoreCSPad/tree/master/Release/Release-1.0/WebsiteRoot'), get release artifacts and paste this in your website root.
+2. Go to your web config and add custom assembly bindings from this [file](URL 'https://github.com/andiappan-ar/SitecoreCSPad/blob/master/Src/SitecoreCSPad/App_Config/Modules/SitecoreCSPad/SitecoreCSPad.Assembly.config.NoNeedtoCopy'). (Please dont copy paste this config, Just do the manual change.)
 3. Since this is a sensitve tool, its placed under admin folder.
    Below is the access path you can access the PAD,
    URL: [https://{your-domain.com}/sitecore/admin/SitecoreCSPad/SitecoreCSPad.aspx](URL 'https://{your-domain.com}/sitecore/admin/SitecoreCSPad/SitecoreCSPad.aspx')
