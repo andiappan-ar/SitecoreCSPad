@@ -35,9 +35,7 @@ namespace SitecoreCSPad.Controllers
                 Error = script.Error,
                 ErrorMessage = script?.ErrorMessage,
                 GeneratedClassCodeWithLineNumbers = script?.GeneratedClassCodeWithLineNumbers
-            };
-
-           //var r = JsonConvert.SerializeObject(executeResult);
+            };           
 
            return new JsonResult() {
                 Data = executeResult,

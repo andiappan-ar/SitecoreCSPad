@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Please paste this in your webconfig assembly binding-->
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+	<runtime>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">			
+			<!--Sitecore CS pad assembly bindings-->
+			<dependentAssembly>
+				<assemblyIdentity name="Microsoft.CodeAnalysis" culture="neutral" publicKeyToken="31bf3856ad364e35"/>
+				<bindingRedirect oldVersion="3.3.0.0-3.3.0.0" newVersion="3.3.0.0" />
+				<codeBase version="3.3.0.0" href="Sitecore\Admin\SitecoreCSPad\Reference\Microsoft.CodeAnalysis.dll" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="System.Collections.Immutable" culture="neutral" publicKeyToken="b03f5f7f11d50a3a"/>
+				<bindingRedirect oldVersion="1.2.3.0-1.2.3.0" newVersion="1.2.3.0" />
+				<codeBase version="1.2.3.0" href="Sitecore\Admin\SitecoreCSPad\Reference\System.Collections.Immutable.dll" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="Microsoft.CodeAnalysis.CSharp" culture="neutral" publicKeyToken="31bf3856ad364e35"/>
+				<bindingRedirect oldVersion="3.3.0.0-3.3.0.0" newVersion="3.3.0.0" />
+				<codeBase version="3.3.0.0" href="Sitecore\Admin\SitecoreCSPad\Reference\Microsoft.CodeAnalysis.CSharp.dll" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="System.Reflection.Metadata" culture="neutral" publicKeyToken="b03f5f7f11d50a3a"/>
+				<bindingRedirect oldVersion="1.4.3.0-1.4.3.0" newVersion="1.4.3.0" />
+				<codeBase version="1.4.3.0" href="Sitecore\Admin\SitecoreCSPad\Reference\System.Reflection.Metadata.dll" />
+			</dependentAssembly>
+			<!--Sitecore CS pad assembly bindings-->
+		</assemblyBinding>
+	</runtime>
+</configuration>

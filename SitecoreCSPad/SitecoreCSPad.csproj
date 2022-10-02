@@ -93,11 +93,6 @@
     <Reference Include="System.Reflection.Metadata, Version=1.4.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Reflection.Metadata.1.6.0\lib\netstandard2.0\System.Reflection.Metadata.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
-      <Private>True</Private>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
@@ -197,6 +192,23 @@
     <Compile Include="Processor\SitecoreCSPadProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <!--Customization-->
+    <Content Include="..\packages\Microsoft.CodeAnalysis.Common.3.3.1\lib\netstandard2.0\Microsoft.CodeAnalysis.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Sitecore\Admin\SitecoreCSPad\Reference\Microsoft.CodeAnalysis.dll</Link>
+    </Content>
+    <Content Include="..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Sitecore\Admin\SitecoreCSPad\Reference\System.Collections.Immutable.dll</Link>
+    </Content>
+	  <Content Include="..\packages\Microsoft.CodeAnalysis.CSharp.3.3.1\lib\netstandard2.0\Microsoft.CodeAnalysis.CSharp.dll">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		  <Link>Sitecore\Admin\SitecoreCSPad\Reference\Microsoft.CodeAnalysis.CSharp.dll</Link>
+	  </Content>
+	  <Content Include="..\packages\System.Reflection.Metadata.1.6.0\lib\netstandard2.0\System.Reflection.Metadata.dll">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		  <Link>Sitecore\Admin\SitecoreCSPad\Reference\System.Reflection.Metadata.dll</Link>
+	  </Content>
     <Content Include="bin\SitecoreCSPad.dll" />
     <Content Include="bin\System.Collections.Immutable.dll" />
     <Content Include="bin\System.Reflection.Metadata.dll" />
@@ -1291,6 +1303,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Modules\SitecoreCSPad\SitecoreCSPad.config" />
+    <None Include="App_Config\Modules\SitecoreCSPad\SitecoreCSPad.Assembly.config.NoNeedtoCopy" />
     <None Include="packages.config" />
     <Content Include="Sitecore\Shell\Themes\Standard\SCCSPADIcon.zip" />
   </ItemGroup>
