@@ -12,6 +12,14 @@ Listed below some example use cases,
 * `Read Sitecore items and bind into custom model`
 * `Call your custom dlls methods`
 
+> ### Boost development speed:
+> During your development - You want to execute some C code for testing purpose , If you write the code and place the dll. This will eat your time.
+> CS Pad will help you to save this time.
+
+> ### Remote code execution and debug experience:
+> You want to execute some C# code in your higher environement and want to check some thing.
+> Then this case CS pad will help you, with out test dll replacement.
+
 ## Features
 | Feature  | Status |
 | ------------- | ------------- |
