@@ -1,6 +1,6 @@
 # SitecoreCSPad
 SitecoreCSPad is pad is used to execute C# codes inside your Sitecore instance.
-We can write and execute code using the sitecore, custom class codes. Below some of use cases,
+We can use sitecore, custom class codes. Below some of use cases,
 
 ![SitecoreCSPadLogo](https://user-images.githubusercontent.com/11770345/193467460-534b919f-4892-474b-a259-e3b1442e88cf.jpg)
 
