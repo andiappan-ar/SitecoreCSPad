@@ -1,10 +1,10 @@
-# SitecoreCSPad
+# Sitecore CS Pad | Sitecore C# Pad
 SitecoreCSPad is pad is used to execute C# codes inside your Sitecore instance.
 We can use sitecore, custom class codes. Below some of use cases,
 
 ![SitecoreCSPadLogo](https://user-images.githubusercontent.com/11770345/193467460-534b919f-4892-474b-a259-e3b1442e88cf.jpg)
 
-## Use cases
+## Sample Use cases : (What we can do with this?)
 Listed below some example use cases,
 
 * `Read SOLR index docuemnts and get the values`
